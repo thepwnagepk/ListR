@@ -1,0 +1,173 @@
+    <!-- modal form-->
+    <div id="formContent">  
+        <form>          
+
+          <button type="button" id="" class="btn btn-block btn-dark" data-toggle="modal" data-target="#loginModal">Login</button>
+
+          <button type="button" id="" class="btn btn-block btn-dark" data-toggle="modal" data-target="#registerModal">Register</button>
+        </form>
+
+    </div>
+    
+    <!--Login  Modal Code -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Look into Sectioning out the body code to reuse the modal code for both Login and Register-->
+                    <input type="text" id="loginemail" class="form-control text-center" name="loginemail" placeholder="email">
+                    <br>
+
+                    <input type="text" id="loginpassword" class="form-control text-center" name="loginpassword" placeholder="password">
+                    <br>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Register  Modal Code -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Look into Sectioning out the body code to reuse the modal code for both Login and Register-->
+                    <input type="text" id="registeremail" class="form-control text-center" name="email" placeholder="email">
+                    <br>
+
+                    <input type="text" id="registername" class="form-control text-center" name="name" placeholder="name">
+                    <br>
+
+                    <input type="text" id="registerpassword" class="form-control text-center" name="password" placeholder="password">
+                    <br>
+
+                    <input type="text" id="registerpassword2" class="form-control text-center" name="password2" placeholder="password">
+                    <br>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Register</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Modal scripts? -->
+<script type="text/javascript">
+        $(document).ready(function() {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function() {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+
+    </script>
+    
+    
+<!-- Sidebar Content-->    
+            <div class="sidebar-header">
+                <h3>ListR</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Lists</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">List 1</a>
+                        </li>
+                        <li>
+                            <a href="#">List 2</a>
+                        </li>
+                        <li>
+                            <a href="#">List 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <div class="line"></div>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Templates</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Template 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Template 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Template 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            
+            
+<!-- Sidebar include -->
+
+        <?php include("menu.php"); ?>
+        
+<!--Row Structure Final-->
+<div class="row" id="row0">
+
+                                <div class="col-1 borders">
+                                    <div class="checkbox-center">
+                                        <input class="big-checkbox" type="checkbox" value>
+                                    </div>
+                                </div>
+
+                                <div class="col-10 borders">
+                                    <div class="container borders">
+                                        <div class="row">
+                                            <div class="col borders textbox">
+                                                <input onchange="addtoArray(id, value); addrow();" type="text" class="textinput form-control text-center" id="0" placeholder="Type Here">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-1 borders">
+                                    <div class="delete-center">
+                                        <img src="icons/minus.svg" alt="Delete Row">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <?php if( isset($_GET['listID']) ){
+echo "clonelist();";
+}else{
+echo ""; }             ?>

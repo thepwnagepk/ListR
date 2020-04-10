@@ -1,0 +1,149 @@
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  /*margin-left: -15rem;*/
+  /*-webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;*/
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 1px;
+  font-size: 1rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+    /* Here are 3 Handwriting based fonts to use, they are smaller than regular sans serif so it looks a bit squashed*/
+   /*font-family: 'Indie Flower', cursive;*/
+   /*font-family: 'Caveat', cursive;*/
+    /*font-family: 'Covered By Your Grace', cursive;*/
+
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+.btn-block{
+    border-radius: 0px;
+}
+
+.textinput{
+    background-color: transparent;
+    color:#000000!important;
+}
+
+.col-1{
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+#page{
+    min-height: 95vh;
+    padding-right: 0px;
+    padding-left: 0px;
+    background: white;
+    background-image: url(pictures/exclusive-paper.png);
+    box-shadow: 1rem 1rem 1rem;
+    max-width: 75vh;
+}
+
+.marketplace-border{
+     box-shadow: 0.5rem 0.5rem 0.5rem;
+}
+
+#outerpage{
+    
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    min-height: 100vh;
+    background: black;
+    /*background-image: url(pictures/wood.jpg);*/
+    background-image: url(pictures/AdobeStock_66265920.jpeg);
+    object-position: center;
+    background-size: cover;
+}
+
+#hr{
+    height: 2;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#mainpagelink{
+    color: #273c75;
+}
+
+#listsavealert{
+        padding: .25rem .25rem;
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width:400px) { 
+    .nav-item{
+        width:100%;
+    }
+}
+
+.bg-light{
+    background-color: #f5f6fa;
+}
+
+.btn-blue{
+    background-color: #273c75;
+    border-color: #273c75;
+    color: #fff;
+}
+
+.btn-red{
+    background-color: #e84118;
+    border-color: #e84118;
+    color: #fff;
+}
+
+.btn-green{
+    background-color: #44bd32;
+    border-color: #44bd32;
+    color: #fff;
+}
+
+.btn-yellow{
+    background-color: #e1b12c;
+    border-color: #e1b12c;
+    color: #fff;
+}
+
+.btn-outline-green{
+    color: #44bd32;
+    border-color: #44bd32;
+    background-color: transparent;
+}
+
